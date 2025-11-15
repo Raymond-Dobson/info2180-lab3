@@ -54,7 +54,7 @@ window.onload = function(){
     let OPositions =[]
     squares.forEach((square,index) => {
         square.addEventListener('click', () =>{
-            if(square.textContent === "" && currentplayer === "X"){
+            if(square.textContent === "" && currentplayer === "X" && status.textContent === instructions){
                 square.textContent = "X";
                 XPositions.push(index);
                 if(Winner(XPositions)){
@@ -65,7 +65,7 @@ window.onload = function(){
                     currentplayer = "O";
                 }
                 
-            } else if (square.textContent === "" && currentplayer === "O"){
+            } else if (square.textContent === "" && currentplayer === "O" && status.textContent === instructions){
                 square.textContent = "O";
                 OPositions.push(index);
                 if(Winner(OPositions)){
